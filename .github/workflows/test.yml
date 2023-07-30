@@ -20,5 +20,5 @@ jobs:
 
     - name: Deploy code
       run: |
-        ssh linux@23.106.36.101 -p 22234 "cd /home/linux/icapeg && git pull"
-        ssh linux@23.106.36.101 -p 22234 "cd /home/linux/icapeg && ./deploy.sh"
+         cd /home/linux/icapeg && git pull
+         cd /home/linux/icapeg && ./deploy.sh
