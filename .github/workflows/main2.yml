@@ -24,7 +24,6 @@ jobs:
           key: ${{ secrets.SSH_PUBLIC_KEY }}
           port: ${{ secrets.REMOTE_SERVER_PORT }}
           password: ${{ secrets.REMOTE_SERVER_PASSWORD }}
-          ip_address: ${{ secrets.REMOTE_SERVER_IP_ADDRESS }}
           source: ./
           target: /home/user/icapeg
 
