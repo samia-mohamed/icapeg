@@ -1,0 +1,39 @@
+name: Deploy to Remote Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build application
+        run: |
+          go build -o icapeg
+
+      - name: Stop current application
+        run: |
+          ssh mahmoud@23.106.36.101 'sudo systemctl stop icapeg'
+
+      - name: Copy files to remote server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_SERVER_HOST }}
+          username: ${{ secrets.REMOTE_SERVER_USERNAME }}
+          key: ${{ secrets.REMOTE_SERVER_PRIVATE_KEY }}
+          source: ./
+          target: /home/user/icapeg
+
+      - name: Start updated application
+        run: |
+          ssh mahmoud@23.106.36.101 'sudo systemctl start icapeg'
+
+      - name: Restart application
+        run: |
+          ssh mahmoud@23.106.36.101 'sudo systemctl restart icapeg'
