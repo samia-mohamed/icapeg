@@ -26,6 +26,10 @@ jobs:
         run: |
           go build -o icapeg
           
+      - name: Start updated application
+        run: |
+          sudo systemctl start icapeg
+          
       - name: Stop current application
         run: |
           sudo systemctl stop icapeg
@@ -40,11 +44,6 @@ jobs:
           password: ${{ secrets.REMOTE_SERVER_PASSWORD }}
           source: ./
           target: /home
-
-      - name: Start updated application
-        run: |
-          ssh -tt linux@23.106.36.101 -p 22234
-          sudo systemctl start icapeg
 
       - name: Restart application
         run: |
