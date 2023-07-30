@@ -20,6 +20,6 @@ jobs:
 
     - name: Deploy code
       run: |
-         cd /home/linux/
+         cd /home/
          mkdir mytest
          
