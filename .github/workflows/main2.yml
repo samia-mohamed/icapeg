@@ -16,11 +16,7 @@ jobs:
       - name: Build application
         run: |
           go build -o icapeg
-
-      - name: Stop current application
-        run: |
-          ssh mahmoud@23.106.36.101 'sudo systemctl stop icapeg'
-
+          
       - name: Copy files to remote server
         uses: appleboy/scp-action@master
         with:
@@ -29,6 +25,10 @@ jobs:
           key: ${{ secrets.REMOTE_SERVER_PRIVATE_KEY }}
           source: ./
           target: /home/user/icapeg
+
+      - name: Stop current application
+        run: |
+          ssh mahmoud@23.106.36.101 'sudo systemctl stop icapeg'
 
       - name: Start updated application
         run: |
