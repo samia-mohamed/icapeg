@@ -15,7 +15,7 @@ jobs:
 
       - name: Build application
         run: |
-          npm run build
+          go build -o icapeg
 
       - name: Stop current application
         run: |
