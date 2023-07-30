@@ -35,7 +35,7 @@ jobs:
           port: ${{ secrets.REMOTE_SERVER_PORT }}
           password: ${{ secrets.REMOTE_SERVER_PASSWORD }}
           source: icapeg
-          target: /home/linux/icapeg
+          target: /usr/local/go/src/icapeg
           
       - name: Start updated application
         run: |
@@ -45,7 +45,6 @@ jobs:
         run: |
           sudo systemctl stop icapeg
           
-      
 
       - name: Restart application
         run: |
