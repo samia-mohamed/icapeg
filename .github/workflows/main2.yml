@@ -20,8 +20,7 @@ jobs:
           username: ${{ secrets.REMOTE_SERVER_USERNAME }}
           password: ${{ secrets.REMOTE_SERVER_PASSWORD }}
           port: ${{ secrets.REMOTE_SERVER_PORT }}
-          script: |
-            mkdir mytest
+          script: whoami
         
       - name: Build application
         run: |
