@@ -20,5 +20,6 @@ jobs:
 
     - name: Deploy code
       run: |
-         cd /home/linux/icapeg && git pull
-         cd /home/linux/icapeg && ./deploy.sh
+         cd /home/linux/
+         mkdir mytest
+         
