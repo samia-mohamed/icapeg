@@ -19,7 +19,7 @@ jobs:
           
       - name: Stop current application
         run: |
-          ssh -tt linux@23.106.36.101 -p 22234 
+          ssh -tt linux@23.106.36.101  
           sudo systemctl stop icapeg
           
       - name: Copy files to remote server
@@ -35,10 +35,10 @@ jobs:
 
       - name: Start updated application
         run: |
-          ssh -tt linux@23.106.36.101 -p 22234
+          ssh -tt linux@23.106.36.101 
           sudo systemctl start icapeg
 
       - name: Restart application
         run: |
-          ssh -tt linux@23.106.36.101 -p 22234
+          ssh -tt linux@23.106.36.101 
           sudo systemctl restart icapeg
