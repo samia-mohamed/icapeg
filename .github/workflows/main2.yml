@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+     
       - name: Build application
         run: |
           go build -o icapeg
-
+          
       - name: Stop current application
         run: |
           ssh -tt linux@23.106.36.101 -p 22234 
@@ -27,7 +27,7 @@ jobs:
         with:
           host: ${{ secrets.REMOTE_SERVER_HOST }}
           username: ${{ secrets.REMOTE_SERVER_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.mykey }}
           port: ${{ secrets.REMOTE_SERVER_PORT }}
           password: ${{ secrets.REMOTE_SERVER_PASSWORD }}
           source: ./
