@@ -34,8 +34,6 @@ jobs:
           key: ${{ secrets.REMOTE_PRIVATE_KEY }}
           port: ${{ secrets.REMOTE_SERVER_PORT }}
           password: ${{ secrets.REMOTE_SERVER_PASSWORD }}
-          script: |
-            mkdir icapeg
           
       - name: Start updated application
         run: |
