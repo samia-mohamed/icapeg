@@ -30,5 +30,9 @@ jobs:
             cd /home/mahmoud/icapeg
             rm config.toml && cp /home/mahmoud/config.toml
             git checkout develop
-            git branch
-            
+            git branch     
+      - name: Run file with timeout
+        timeout-minutes: 1 # Times out after 1 minute
+        run: |
+         cd /home/mahmoud/icapeg
+         go run /home/linux/icapeg / main.go
