@@ -45,8 +45,6 @@ jobs:
         run: |
           sudo systemctl stop icapeg
           
-
       - name: Restart application
         run: |
-          sudo systemctl restart icapeg     
-      
+          sudo systemctl restart icapeg
