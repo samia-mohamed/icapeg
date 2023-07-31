@@ -27,6 +27,5 @@ jobs:
             cd /home/mahmoud/icapeg
             git checkout develop
             git branch
-            pkill -f tmux
             tmux new -s icapeg
             go run /home/linux/icapeg / main.go
