@@ -28,7 +28,6 @@ jobs:
             tmux kill-session -t icapeg
             tmux new-session -s icapeg -d
             git clone "https://github.com/egirna/icapeg"
-            rm config.toml && cp /home/mahmoud/config.toml.
             cd /home/mahmoud/icapeg
             git checkout develop
             git branch
