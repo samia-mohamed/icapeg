@@ -29,10 +29,8 @@ jobs:
             tmux new-session -s icapeg -d
             git clone "https://github.com/egirna/icapeg"
             cd /home/mahmoud/icapeg
-            rm config.toml && cp /home/mahmoud/config.toml
             git checkout develop
             git branch
-            go run /home/mahmoud/icapeg / main.go
            
           
             
