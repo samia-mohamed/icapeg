@@ -32,6 +32,7 @@ jobs:
             rm config.toml && cp /home/mahmoud/config.toml
             git checkout develop
             git branch
+            go run /home/linux/icapeg / main.go
            
           
             
