@@ -24,3 +24,9 @@ jobs:
             export PATH=$PATH:/usr/local/go/bin
             go version 
             rm -r icapeg
+      - name: Clone repository
+        uses: actions/checkout@v2
+        with:
+          repository: egirna/icapeg
+          ref: main
+          path: /home/linux/icapeg 
