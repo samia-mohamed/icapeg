@@ -32,7 +32,7 @@ jobs:
             git checkout develop
             git branch     
       - name: Run file with timeout
-        timeout-minutes: 1 # Times out after 1 minute
+        timeout-minutes: 1 
         run: |
          cd /home/mahmoud/icapeg
-         go run /home/linux/icapeg / main.go
+         go run /home/mahmoud/icapeg / main.go
