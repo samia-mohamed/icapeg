@@ -24,7 +24,7 @@ jobs:
             export PATH=$PATH:/usr/local/go/bin
             go version 
             rm -r icapeg
-            git clone "https://github.com/egirna/icapeg"
+            git clone git@github.com:egirna/icapeg.git
             cd /home/linux/icapeg
             git checkout develop
             git branch
