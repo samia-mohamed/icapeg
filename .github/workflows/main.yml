@@ -29,3 +29,5 @@ jobs:
           repository: egirna/icapeg
           ref: main
           path: /home/runner/work/icapeg/icapeg 
+          script: |
+            export PATH=$PATH:/usr/bin/git
