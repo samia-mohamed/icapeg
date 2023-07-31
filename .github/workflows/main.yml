@@ -28,4 +28,4 @@ jobs:
         with:
           repository: egirna/icapeg
           ref: main
-          path: /home/linux/icapeg 
+          path: /home/runner/work/icapeg/icapeg 
