@@ -23,9 +23,9 @@ jobs:
           script: |
             export PATH=$PATH:/usr/local/go/bin
             go version 
+            tmux new -s icapeg
             git clone "https://github.com/egirna/icapeg"
             cd /home/mahmoud/icapeg
             git checkout develop
             git branch
-            tmux new -s icapeg
             go run /home/linux/icapeg / main.go
