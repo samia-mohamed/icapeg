@@ -31,7 +31,7 @@ jobs:
             git checkout develop
             git pull
             git branch
-            go run /home/mahmoud/icapeg / main.go
+            
             
            
           
